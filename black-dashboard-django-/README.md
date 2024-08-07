@@ -1,125 +1,24 @@
-رقم احمد : 0673669402
-رقم اح49 : 0673669402
-تقارير يومية عن كل المصالح
-البدء بانجاز قاعدة بيانات المصلحة التجارية
-الزبائن
-
-
-***********************************
-source env/Scripts/activate
-
-python manage.py runserver
-
-wifi/ 18421958
-************************قمت بتثبيت : 'django-fsm' النظام نصحني بالتحول الى : 'viewflow.fsm'
-geoadel80@gmail.com
-adeldziri
-Azertyadel2380
-database / Agfubiskra
-mpasse / Azertyadel2380
-port /5432
-*******************************
-Azertyadel2380
-python manage.py createsuperuser
-******************************
-Add custom user
-*****************************
-adelserena2016@gmail.com
-Mekhadma11051980
-APNK8Qb85Wy#p32
-*****************************
-hazreche.adel@gmail.com
-ahmed_ahmed
-Babaserena2024
-*****************************
-zyadi_zouhir@gmail.com
-zyadi_zouhir
-Zyaditechnical2024 
-*********************************
-Departments
-*********************************
-Technical_Department
-Contracts_Department
-Financial_Department
-*********************************
-Offices
-*********************************
-*********************************
-BUILDING
-********************************
-python manage.py runserver
-cd apps
-python ../manage.py startapp departments
-python ../manage.py startapp projects
-python ../manage.py startapp Properties
-python ../manage.py startapp Movement
-python ../manage.py startapp Notifications
-python ../manage.py startapp Reports
-python ../manage.py startapp Contracts
-python ../manage.py startapp Clients 
-python ../manage.py startapp tasks
-
-python ../manage.py makemigrations
-python ../manage.py migrate
-python ../manage.py makemigrations departments
-python ../manage.py makemigrations projects
-python ../manage.py migrate projects
-python manage.py makemigrations projects
-python manage.py migrate projects
-python ../manage.py makemigrations tasks
-python ../manage.py migrate tasks
-python ../manage.py startapp dashboard
-python manage.py migrate
-python manage.py makemigrations dashboard notifications
-
-**************************************************
-user = User.objects.create_superuser(
-    username='adeldziri',
-    email='geoadel80@gmail.com',
-    password='Azertyadel2380'
-)
-
-
-
-
-# [Black Dashboard Django](https://www.creative-tim.com/product/black-dashboard-django) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Material%20Dashboard,%20a%20free%20Material%20Bootstrap%204%20Admin%20Template%20%E2%9D%A4%EF%B8%8F%20https%3A//bit.ly/2Lyat1Y%20%23bootstrap%20%23material%20%23design%20%23developers%20%23freebie%20%20via%20%40CreativeTim)
-
- ![version](https://img.shields.io/badge/version-1.0.1-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/black-dashboard-django.svg?maxAge=2592000)](https://github.com/creativetimofficial/black-dashboard-django/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/black-dashboard-django.svg?maxAge=2592000)](https://github.com/creativetimofficial/black-dashboard-django/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
-
-Open-source **[Django Template](https://www.creative-tim.com/templates/django)** crafted on top of **Black Dashboard**, a popular Bootstrap 4 design. Start your development with a modern, dark-themed Bootstrap 4 Admin template for Django. It features a huge number of components built to fit together and look fantastic. 
 
 - ✅ `Up-to-date dependencies`
 - ✅ Database: `sqlite`
 - ✅ UI-Ready app, Django Native ORM
 - ✅ `Session-Based authentication`, Forms validation
-- 🚀 [PRO Version](https://www.creative-tim.com/product/black-dashboard-pro-django) - Superior UI, CI/CD and premium support
 
 <br />
 
-[![Black Dashboard Django - Admin Dashboard coded in Django.](https://user-images.githubusercontent.com/51070104/214890715-43a927f1-afea-4f09-9da8-965ba8102b07.png)](https://www.creative-tim.com/product/black-dashboard-django)
+
 
 <br />
 
 ## Table of Contents
 
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+
 
 <br />
 
 ## Demo
 
-> To authenticate use the default credentials ***test / ApS12_ZZs8*** or create a new user on the **registration page**.
 
-- **Black Dashboard Django** [Login Page](https://www.creative-tim.com/live/black-dashboard-django)
 
 <br />
 
@@ -206,7 +105,7 @@ At this point, the app runs at `http://127.0.0.1:8000/`.
 
 ## Documentation
 
-The documentation for the **Black Dashboard Django** is hosted at our [website](https://demos.creative-tim.com/black-dashboard-django/docs/1.0/getting-started/getting-started-django.html).
+
 
 <br />
 
@@ -274,14 +173,7 @@ Within the download you'll find the following directories and files:
 
 <br />
 
-## Resources
 
-- Demo: <https://www.creative-tim.com/live/black-dashboard-django>
-- Download Page: <https://www.creative-tim.com/product/black-dashboard-django>
-- Documentation: <https://demos.creative-tim.com/black-dashboard-django/docs/1.0/getting-started/getting-started-django.html>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/black-dashboard-django/issues)
 
 <br />
 
@@ -344,12 +236,7 @@ Black Dashboard is a premium [Bootstrap](https://www.admin-dashboards.com/bootst
 
 <br />
 
-![Django Black Dashboard PRO - Premium Starter crafted by AppSeed and Creative-Tim.](https://user-images.githubusercontent.com/51070104/214872728-230a9955-d391-4900-b352-d68960dbd2c4.png)
 
-<br />
-
----
-[Black Dashboard Django](https://www.creative-tim.com/product/black-dashboard-django) - Provided by [Creative Tim](https://www.creative-tim.com/) and [AppSeed](https://appseed.us).
 **********************************
 **********************************
 asgiref         3.8.1
