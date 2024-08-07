@@ -1,0 +1,42 @@
+<!-- projects/templates/projects/project_detail.html -->
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">	         	                                                        
+    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <label class="btn btn-sm btn-primary btn-simple active" id="6">
+                        <input type="radio" name="options" checked>
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> تفاصيل المشروع</span>
+                        <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-single-02"></i>
+                </span>
+                </label>                                    
+    </div>                    
+        </div>
+<h1>{{ object.name }}</h1>
+<table class="table">
+<p><ul><strong>Type:</strong> {{ object.type }}</ul></p>
+<p><ul><strong>Description:</strong> {{ object.description }}</ul></p>
+<p><ul><strong>Start Date:</strong> {{ object.start_date }}</ul></p>
+<p><ul><strong>End Date:</strong> {{ object.end_date }}</ul></p>
+<p><ul><strong>Status:</strong> {{ object.status }}</ul></p>
+<p><ul><strong>Current office:</strong> {{ object.current_office }}</ul></p>
+<p><ul><strong>Next office:</strong> {{ object.next_office }}</ul></p>
+<p><ul><strong>Priority:</strong> {{ object.priority }}</ul></p>
+<p><ul><strong>Budget:</strong> {{ object.budget }}</ul></p>
+<p><ul><strong>Contract number:</strong> {{ object.contract_number }}</ul></p>
+<p><ul><strong>completion percentage:</strong> {{ object.completion_percentage }}</ul></p>
+<p><ul><strong>Risk level:</strong> {{ object.risk_level }}</ul></p>
+<p><ul><strong>Estimated duration:</strong> {{ object.estimated_duration }}</ul></p>
+<p><ul><strong>Notes:</strong> {{ object.notes }}</ul></p>
+</table>
+<p><a href="{% url 'project-update' pk=object.pk %}">Edit</a> | <a href="{% url 'project-delete' pk=object.pk %}">Delete</a></p>
+<a href="{% url 'project-list' %}">Back to Project List</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

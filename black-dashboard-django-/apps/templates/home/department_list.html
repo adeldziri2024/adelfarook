@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Departments List</h4>
+        </div>
+        <div class="card-body">
+          <p>Departments count: {{ apps.departments|length }}</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for department in object_list %}
+                <tr>
+                  <td>{{ department.name }}</td>
+                  <td>{{ department.description }}</td>
+                  <td>
+                    <a href="{% url 'office_list' department.id %}">View Offices</a>
+                  </td>
+                </tr>
+                {% empty %}
+                <tr>
+                  <td colspan="3">No departments found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

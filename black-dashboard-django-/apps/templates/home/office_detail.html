@@ -1,0 +1,5 @@
+<h1>Office Details</h1>
+<p>Name: {{ office.name }}</p>
+<p>Department: {{ office.department.name }}</p>
+<a href="{% url 'office_list' office.department.id %}">Back to Offices</a>
+

@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">	         	                                                        
+      <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                  <label class="btn btn-sm btn-primary btn-simple active" id="6">
+                          <input type="radio" name="options" checked>
+                          <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">تفاصيل المهــمة </span>
+                          <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-single-02"></i>
+                  </span>
+                  </label>                                    
+      </div>                    
+          </div>
+<h1>{{ object.name }}</h1>
+<p><strong>Description:</strong> {{ object.description }}</p>
+<p><strong>Project:</strong> {{ object.project }}</p>
+<p><strong>Assigned To:</strong> {{ object.assigned_to }}</p>
+<p><strong>Office:</strong> {{ object.office }}</p>
+<p><strong>Status:</strong> {{ object.status }}</p>
+<p><strong>Due Date:</strong> {{ object.due_date }}</p>
+<p><a href="{% url 'task-update' pk=object.pk %}">Edit</a> | <a href="{% url 'task-delete' pk=object.pk %}">Delete</a></p>
+<a href="{% url 'task-list' %}">Back to Tasks List</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

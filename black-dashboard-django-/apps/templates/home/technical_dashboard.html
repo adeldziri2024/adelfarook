@@ -1,0 +1,31 @@
+<!-- templates/technical_dashboard.html -->
+{% extends "layouts/base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>لوحة تحكم قسم التقنية</h1>
+        
+        <h2>المهام</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>اسم المهمة</th>
+                    <th>تاريخ الاستحقاق</th>
+                    <th>الحالة</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.due_date }}</td>
+                    <td>{{ task.status }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">لا توجد مهام</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

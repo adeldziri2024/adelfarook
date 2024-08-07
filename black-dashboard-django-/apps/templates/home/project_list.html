@@ -1,0 +1,104 @@
+<!-- apps/templates/home/project_list.html -->
+{% extends "layouts/base.html" %}
+{% block title %}My Blog{% endblock %}
+
+<!-- Specific Page CSS goes HERE Project List -->
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">	         	                                                        
+    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+        <label class="btn btn-sm btn-primary btn-simple custom-label" id="6">
+            <input type="radio" name="options" checked>
+            <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">قائمة المشاريع</span>
+            <span class="d-block d-sm-none">
+                <i class="tim-icons icon-single-02"></i>
+            </span>
+        </label>
+        
+        <!-- CSS -->
+        <style>
+            .custom-label {
+                border: 2px solid #007bff; /* استبدل باللون الذي تريده */
+                background-color: transparent;
+                color: #007bff; /* استبدل باللون الذي تريده */
+            }
+        
+            .custom-label.active {
+                background-color: #007bff; /* استبدل باللون الذي تريده */
+                color: #ffffff; /* استبدل باللون الذي تريده */
+            }
+        
+            .custom-label input[type="radio"] {
+                visibility: hidden;
+            }
+        </style>                                    
+    </div>                    
+        </div>
+         
+        <div class="card-body">
+            <p>Projects count: {{ object_list|length }}</p>
+          <table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Start_date</th>
+            <th>End_date</th>
+            <th>Current_office</th>
+            <th>Next_office</th> 
+            <th>Priority</th> 
+            <th>Budget</th>
+            <th>Contract number</th>
+            <th>completion percentage</th>
+            <th>Risk level</th>
+            <th>Estimated duration</th>
+            <th>Notes</th>         
+        </tr>
+    </thead>
+    <tbody>	    
+        {% for project in object_list %}
+        <tr>
+            <td><a href="{% url 'project-detail' pk=project.pk %}">{{ project.name }}</a></td>
+            <td>{{ project.type }}</td>
+            <td>{{ project.description }}</td>
+            <td>{{ project.status }}</td>
+            <td>{{ project.start_date }}</td>
+            <td>{{ project.end_date }}</td>
+            <td>{{ project.current_office }}</td>
+            <td>{{ project.next_office }}</td>
+            <td>{{ project.priority }}</td>
+            <td>{{ project.budget }}</td>
+            <td>{{ project.contract_number }}</td>
+            <td>{{ project.completion_percentage }}</td>
+            <td>{{ project.risk_level }}</td>
+            <td>{{ project.estimated_duration }}</td>
+            <td>{{ project.notes }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No projects available.</td>
+        </tr>
+        {% endfor %}
+
+	
+    </tbody>
+</table>
+
+<div class="col-md-3 col-sm-4">
+    <p class="category">&nbsp;</p>
+    <button class="btn btn-simple btn-twitter">
+        <i class=""></i> <a href="{% url 'project-create' %}">Create New Project</a>
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+

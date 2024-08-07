@@ -1,0 +1,12 @@
+his version of 'django-fsm' is no longer maintained and will not receive further updates. If you require new functionality introduced in 'django-fsm' version 3.0 or later, please migrate to 'viewflow.fsm'. For detailed instructions on the migration process and accessing new features, refer to the official documentation at https://docs.viewflow.io/fsm/index.html
+  show_deprecation_warning()
+D:\START-PROJECT\black-dashboard-django-Actuel\black-dashboard-django-\env\Lib\site-packages\django_fsm\__init__.py:63: UserWarning: The 'django-fsm' package has been integrated into 'viewflow' as 'viewflow.fsm' starting from version 3.0. This version of 'django-fsm' is no longer maintained and will not receive further updates. If you require new functionality introduced in 'django-fsm' version 3.0 or later, please migrate to 'viewflow.fsm'. For detailed instructions on the migration process and accessing new features, refer to the official documentation at https://docs.viewflow.io/fsm/index.html
+  show_deprecation_warning()
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2024 - 23:37:06
+Django version 3.2.16, using settings 'core.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.

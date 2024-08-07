@@ -1,0 +1,36 @@
+<!--task_form.html -->
+{% extends "layouts/base.html" %}
+
+{% block title %} Maps {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+            <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                <input type="radio" name="options" checked>
+                <span class="d-none d-sm-block d-md-block"><h6>Create New Task</h6></span>
+                <span class="d-block d-sm-none">
+                <i class="tim-icons icon-single-02"></i>
+                </span>
+            </label>                                    
+        </div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'task-list' %}">Back to Tasks List</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

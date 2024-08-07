@@ -1,0 +1,49 @@
+
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Offices in {{ department.name }}</h4>
+        </div>
+        <div class="card-body">
+          <p>Offices count: {{ offices|length }}</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Responsibilities</th>
+                <th>Director</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              {% if offices %}
+                {% for office in offices %}
+                <tr>
+                  <td>{{ office.name }}</td>
+                  <td>{{ office.responsibilities }}</td>
+                  <td>{{ office.director }}</td>
+                  <td>
+                    <a href="{% url 'office_detail' office.id %}">View Details</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              {% else %}
+                <tr>
+                  <td colspan="4">No offices found.</td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

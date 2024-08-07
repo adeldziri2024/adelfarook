@@ -1,0 +1,32 @@
+<!-- projects/templates/projects/project_confirm_delete.html -->
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">	         	                                                        
+    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <label class="btn btn-sm btn-primary btn-simple active" id="6">
+                        <input type="radio" name="options" checked>
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> حذف المشروع</span>
+                        <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-single-02"></i>
+                </span>
+                </label>                                    
+    </div>                    
+        </div>
+<h3>Are you sure you want to delete "{{ object.name }}"?</h3>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">تأكيد الحذف</button>
+</form>
+
+
+<h6>لا يمكن التراجع بعد تأكيد العملية</h6>
+<a href="{% url 'project-list' %}">إلغاء العملية</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

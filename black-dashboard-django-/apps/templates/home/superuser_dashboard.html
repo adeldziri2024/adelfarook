@@ -1,0 +1,110 @@
+<!-- templates/superuser_dashboard.html -->
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">	         	                                                        
+      <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+            <label class="btn btn-sm btn-primary btn-simple custom-label" id="6">
+                <input type="radio" name="options" checked>
+                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">         General Manager Dashboard
+                </span>
+                <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-single-02"></i>
+                </span>
+            </label>
+            
+            <!-- CSS -->
+            <style>
+                .custom-label {
+                    border: 2px solid #007bff; /* استبدل باللون الذي تريده */
+                    background-color: transparent;
+                    color: #007bff; /* استبدل باللون الذي تريده */
+                }
+            
+                .custom-label.active {
+                    background-color: #007bff; /* استبدل باللون الذي تريده */
+                    color: #ffffff; /* استبدل باللون الذي تريده */
+                }
+            
+                .custom-label input[type="radio"] {
+                    visibility: hidden;
+                }
+            </style>                                               
+      </div>                    
+          </div>
+    <div class="container">
+        <!-- العنصر الأب للعناوين -->
+<div style="text-align: left;"> <!-- لتغيير المحاذاة إلى اليمين -->
+    
+</div>
+
+        
+        <h2>Projects</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>اسم المشروع</th>
+                    <th>تاريخ البدء</th>
+                    <th>تاريخ الانتهاء</th>
+                    <th>الحالة</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project.name }}</td>
+                    <td>{{ project.start_date }}</td>
+                    <td>{{ project.end_date }}</td>
+                    <td>{{ project.status }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">لا توجد مشاريع</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Tasks</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>اسم المهمة</th>
+                    <th>تاريخ الاستحقاق</th>
+                    <th>الحالة</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.due_date }}</td>
+                    <td>{{ task.status }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">لا توجد مهام</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>الإشعارات</h2>
+        <ul>
+            {% for notification in notifications %}
+            <li>{{ notification.message }} - {{ notification.timestamp }}</li>
+            {% empty %}
+            <li>لا توجد إشعارات</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+{% endblock %}
+

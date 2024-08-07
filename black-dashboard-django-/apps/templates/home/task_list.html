@@ -1,0 +1,64 @@
+<!-- templates//task_list.html -->
+{% extends "layouts/base.html" %}
+{% block title %}My Blog{% endblock %}
+<!-- Specific Page CSS goes HERE Project List -->
+{% block content %}
+<div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">	         	                                                        
+      <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                  <label class="btn btn-sm btn-primary btn-simple active" id="6">
+                          <input type="radio" name="options" checked>
+                          <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">قائمة المهـــــام</span>
+                          <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-single-02"></i>
+                  </span>
+                  </label>                                    
+      </div>                    
+          </div>
+           
+          <div class="card-body">
+              <p>Tasks count: {{ object_list|length }}</p>
+            <table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Project</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+            <th>Due Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for task in object_list %}
+        <tr>
+            <td><a href="{% url 'task-detail' pk=task.pk %}">{{ task.name }}</a></td>
+            <td>{{ task.project }}</td>
+            <td>{{ task.assigned_to }}</td>
+            <td>{{ task.status }}</td>
+            <td>{{ task.due_date }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No tasks available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="row">
+    
+</div>
+<div class="col-md-3 col-sm-4">
+    <p class="category">&nbsp;</p>
+    <button class="btn btn-simple btn-twitter">
+        <i class=""></i> <a href="{% url 'task-create' %}">Create New Task</a>
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

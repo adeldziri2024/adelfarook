@@ -1,0 +1,10 @@
+<!-- projects/templates/projects/project_detail.html -->
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ object.name }}</h1>
+<p><strong>Description:</strong> {{ object.description }}</p>
+<p><strong>Start Date:</strong> {{ object.start_date }}</p>
+<p><strong>End Date:</strong> {{ object.end_date }}</p>
+<p><strong>Status:</strong> {{ object.status }}</p>
+<p><a href="{% url 'project-update' pk=object.pk %}">Edit</a> | <a href="{% url 'project-delete' pk=object.pk %}">Delete</a></p>
+{% endblock %}
